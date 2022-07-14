@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  background-color: #f1f5f8;
+  height: 100vh;
+  width: 100vw;
+}
+
+.menu {
+  background-color: white;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  left: 0;
+  max-width: 500px;
+  position: fixed;
+  row-gap: 1rem;
+  top: 0;
+  transition: all 0.3s linear;
+  transform: translate(-100%);
+  width: 100%;
+  z-index: 1;
+}
+
+.toggle {
+  transform: translate(0);
+}
+
+.title-container {
+  align-items: center;
+  display: flex;
+  grid-row: 1/1;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.close-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.close-btn i {
+  color: #bb2525;
+  font-size: 28px;
+}
+
+.close-btn:hover {
+  transform: rotate(360deg);
+}
+
+.menu-content {
+  animation: bounce 2s ease-in-out infinite;
+  position: fixed;
+  right: 3rem;
+  top: 2rem;
+}
+
+.menu-content i {
+  color: #49a6e9;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* Menu de navegação */
+
+nav {
+  grid-row: 2/2;
+}
+
+.links a {
+  color: hsl(210, 22%, 49%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 34px;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+.links li {
+  list-style: none;
+  padding: 1.5rem 0;
+  transition: all 0.3s linear;
+}
+
+.links li:hover a {
+  color: #49a6e9;
+}
+
+.links li:hover a {
+  padding-left: 1.75rem;
+}
+
+.links li:hover {
+  background-color: hsl(205, 86%, 81%);
+}
+
+/* Socials */
+
+.socials {
+  align-items: center;
+  display: flex;
+  grid-row: 3/3;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.socials ul {
+  display: flex;
+  list-style: none;
+}
+
+.socials a {
+  color: #49a6e9;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+.socials a:hover {
+  color: hsl(205, 86%, 17%);
+}
+
+.socials li {
+  margin: 0 9px;
+}
